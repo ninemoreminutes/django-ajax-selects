@@ -7,7 +7,7 @@
 <input type="hidden" name="{{name}}" id="{{html_id}}" value="{{current_id}}" />
 <div id="{{html_id}}_on_deck" class="results_on_deck"><div>{{current_result|safe}}</div></div>
 <script type="text/javascript">//<![CDATA[
-jQuery(document).ready(function($){
+jQuery_1_6_4(document).ready(function($){
 	addAutoComplete("{{html_id}}", function(html_id) {
 		$("#"+html_id).autocompleteselect({
 			minLength: {{min_length}},

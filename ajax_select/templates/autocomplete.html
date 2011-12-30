@@ -1,7 +1,7 @@
 {% if bootstrap %}{% include "ajax_select/bootstrap.html" %}{% endif %}
 <input type="text" name="{{name}}" id="{{html_id}}" value="{{current_name}}" {{ extra_attrs }} />
 <script type="text/javascript">//<![CDATA[
-jQuery(document).ready(function($){
+jQuery_1_6_4(document).ready(function($){
 {% block script %}
 	addAutoComplete("{{html_id}}", function(html_id) {
 		$("#"+html_id).autocomplete({

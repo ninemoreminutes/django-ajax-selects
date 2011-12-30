@@ -1,5 +1,5 @@
 
-if(typeof jQuery.fn.autocompletehtml != 'function') {
+if(typeof jQuery_1_6_4.fn.autocompletehtml != 'function') {
 
 (function($) {
 
@@ -140,7 +140,7 @@ $.fn.autocompleteselectmultiple = function(options) {
 		});
 	});
 };
-})(jQuery);
+})(jQuery_1_6_4);
 
 	function addAutoComplete(prefix_id, callback/*(html_id)*/) {
 		/* detects inline forms and converts the html_id if needed */
@@ -148,13 +148,13 @@ $.fn.autocompleteselectmultiple = function(options) {
 		var html_id = prefix_id;
 		if(html_id.indexOf("__prefix__") != -1) {
 			// Some dirty loop to find the appropriate element to apply the callback to
-			while (jQuery('#'+html_id).length) {
+			while (jQuery_1_6_4('#'+html_id).length) {
 				html_id = prefix_id.replace(/__prefix__/, prefix++);
 			}
 			html_id = prefix_id.replace(/__prefix__/, prefix-2);
 			// Ignore the first call to this function, the one that is triggered when
 			// page is loaded just because the "empty" form is there.
-			if (jQuery("#"+html_id+", #"+html_id+"_text").hasClass("ui-autocomplete-input"))
+			if (jQuery_1_6_4("#"+html_id+", #"+html_id+"_text").hasClass("ui-autocomplete-input"))
 				return;
 		}
 		callback(html_id);
@@ -164,7 +164,7 @@ $.fn.autocompleteselectmultiple = function(options) {
 	so if using outside of the admin then you would need to include that manually */
 	function didAddPopup(win,newId,newRepr) {
 		var name = windowname_to_id(win.name);
-		jQuery("#"+name).trigger('didAddPopup',[html_unescape(newId),html_unescape(newRepr)]);
+		jQuery_1_6_4("#"+name).trigger('didAddPopup',[html_unescape(newId),html_unescape(newRepr)]);
 		win.close();
 	}
 }
